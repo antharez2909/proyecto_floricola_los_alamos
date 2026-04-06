@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Comprar flores</h2>
+
+<form method="POST">
+
+    <!-- Selección de flor -->
+    <label>Flor</label>
+    <select name="flor">
+        {% for flor in flores %}
+            <option value="{{ flor }}">{{ flor }}</option>
+        {% endfor %}
+    </select>
+
+    <!-- Cantidad -->
+    <label>Cantidad</label>
+    <input type="number" name="cantidad" required>
+
+    <button type="submit">Comprar</button>
+
+</form>
+
+{% endblock %}

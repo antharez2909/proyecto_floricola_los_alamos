@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Mis datos</h2>
+
+<div class="card">
+
+    <!-- Datos del usuario -->
+    <p><strong>Nombres:</strong> {{ cliente.nombres }}</p>
+    <p><strong>Apellidos:</strong> {{ cliente.apellidos }}</p>
+    <p><strong>Correo:</strong> {{ cliente.correo }}</p>
+    <p><strong>Edad:</strong> {{ cliente.edad }}</p>
+
+</div>
+
+{% endblock %}

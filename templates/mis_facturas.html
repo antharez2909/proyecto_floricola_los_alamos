@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Mis Facturas</h2>
+
+<table>
+    <tr>
+        <th>Código</th>
+        <th>Flor</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Subtotal</th>
+        <th>Total</th>
+    </tr>
+
+    {% for f in facturas %}
+    <tr>
+        <td>{{ f.codigo }}</td>
+        <td>{{ f.flor }}</td>
+        <td>{{ f.cantidad }}</td>
+        <td>$ {{ f.precio }}</td>
+        <td>$ {{ f.subtotal }}</td>
+        <td>$ {{ f.total }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

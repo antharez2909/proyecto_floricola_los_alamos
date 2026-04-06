@@ -1,0 +1,24 @@
+<!-- Esta página hereda la estructura principal desde base.html -->
+{% extends "base.html" %}
+
+<!-- Todo el contenido se coloca dentro del bloque content -->
+{% block content %}
+
+<!-- Título de la página -->
+<h2>Detalle del Pedido</h2>
+
+<!--
+Aquí se muestra el código del pedido.
+La variable "codigo" viene desde Flask (app.py)
+cuando se accede a la ruta /pedido/<codigo>
+-->
+
+<p><b>Código del pedido:</b> {{ codigo }}</p>
+
+<!-- Descripción simple del pedido -->
+<p>Este pedido corresponde a una compra realizada en la floristería.</p>
+
+<!-- Enlace para regresar a la página principal -->
+<a href="/">Volver al inicio</a>
+
+{% endblock %}

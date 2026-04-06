@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración de caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Ajuste para pantallas pequeñas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la pestaña -->
+    <title>Floricola</title>
+
+    <!-- Enlace al archivo de estilos -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <!-- =========================================
+    ENCABEZADO PRINCIPAL
+    ========================================= -->
+    <header>
+        <h1>🌸 FLORICOLA LOS ALAMOS</h1>
+
+        <!-- Si hay un usuario en sesión, mostrar bienvenida -->
+        {% if session.get("usuario") %}
+            <p class="bienvenida">Bienvenido, {{ session.get("usuario") }}</p>
+        {% endif %}
+    </header>
+
+    <!-- =========================================
+    MENÚ DE NAVEGACIÓN
+    ========================================= -->
+    <nav class="navbar">
+
+        {% if session.get("usuario") %}
+
+            <a href="/">Inicio</a>
+            <a href="/about">Acerca de</a>
+
+            {% if session.get("rol") == "admin" %}
+                <a href="/admin">Admin</a>
+                <a href="/clientes">Clientes</a>
+                <a href="/mis-pedidos">Pedidos</a>
+                <a href="/mis-facturas">Facturas</a>
+            {% else %}
+                <a href="/clientes">Mis datos</a>
+                <a href="/venta">Comprar</a>
+                <a href="/mis-compras">Mis compras</a>
+                <a href="/mis-pedidos">Mis pedidos</a>
+                <a href="/mis-facturas">Mis facturas</a>
+            {% endif %}
+
+            <a href="/logout" class="logout-btn">Salir</a>
+
+        {% else %}
+
+            <a href="/login">Login</a>
+            <a href="/registro">Registro</a>
+
+        {% endif %}
+
+    </nav>
+
+    <!-- =========================================
+    CONTENIDO PRINCIPAL
+    ========================================= -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- =========================================
+    PIE DE PÁGINA
+    ========================================= -->
+    <footer>
+        <p>© 2026 Floricola Los Alamos
+
+            contacto: losalamos@gmail.com
+            
+            teléfono: 0980224624
+        </p>
+    </footer>
+
+</body>
+</html>

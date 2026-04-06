@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Mis pedidos</h2>
+
+<table>
+    <tr>
+        <th>Código</th>
+        <th>Flor</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Subtotal</th>
+        <th>Total</th>
+    </tr>
+
+    {% for pedido in pedidos %}
+    <tr>
+        <td>{{ pedido.codigo }}</td>
+        <td>{{ pedido.flor }}</td>
+        <td>{{ pedido.cantidad }}</td>
+        <td>$ {{ pedido.precio }}</td>
+        <td>$ {{ pedido.subtotal }}</td>
+        <td>$ {{ pedido.total }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

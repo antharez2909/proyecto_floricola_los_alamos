@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Página que muestra la factura generada -->
+
+<h2>Factura de Venta</h2>
+
+<!-- Datos de la venta recibidos desde Flask -->
+
+<p><b>Cliente:</b> {{cliente}}</p>
+
+<p><b>Flor:</b> {{flor}}</p>
+
+<p><b>Cantidad:</b> {{cantidad}}</p>
+
+<p><b>Total a pagar:</b> ${{total}}</p>
+
+<br>
+
+<!-- Botón para regresar a ventas -->
+<a href="/venta">Nueva Venta</a>
+
+{% endblock %}

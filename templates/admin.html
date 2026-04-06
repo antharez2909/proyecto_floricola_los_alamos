@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Panel Admin</h2>
+
+<div class="dashboard">
+
+    <div class="card">
+        <h3>Usuarios</h3>
+        <p>{{ usuarios|length }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Pedidos</h3>
+        <p>{{ pedidos|length }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Facturas</h3>
+        <p>{{ facturas|length }}</p>
+    </div>
+
+</div>
+
+{% endblock %}

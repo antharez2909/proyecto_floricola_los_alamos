@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Contenedor principal del registro -->
+<div class="login-container">
+
+    <!-- Caja del formulario -->
+    <div class="form-container">
+
+        <!-- Título -->
+        <h2>Registro</h2>
+
+        <!--
+        Si existe un error enviado desde Flask,
+        se muestra en pantalla
+        -->
+        {% if error %}
+        <div class="error">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <!-- Formulario de registro -->
+        <form method="POST">
+
+            <!-- Campo nombres -->
+            <label for="nombres">Nombres</label>
+            <input type="text" name="nombres" id="nombres" required>
+
+            <!-- Campo apellidos -->
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" required>
+
+            <!-- Campo correo -->
+            <label for="correo">Correo</label>
+            <input type="email" name="correo" id="correo" required>
+
+            <!-- Campo contraseña -->
+            <label for="password">Contraseña</label>
+            <input type="password" name="password" id="password" required>
+
+            <!-- Botón de registro -->
+            <button type="submit">Registrarse</button>
+
+        </form>
+
+        <!-- Enlace para volver al login -->
+        <p class="registro-texto">
+            ¿Ya tienes cuenta? <a href="/login">Inicia sesión</a>
+        </p>
+
+    </div>
+</div>
+
+{% endblock %}

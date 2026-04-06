@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Panel Principal</h2>
+
+<div class="dashboard">
+
+    <div class="card">
+        <h3>👤 Mis datos</h3>
+        <p>Consulta tu información personal registrada en el sistema.</p>
+        <a href="/clientes" class="btn-link">Ver</a>
+    </div>
+
+    <div class="card">
+        <h3>📦 Mis pedidos</h3>
+        <p>Revisa los pedidos que has realizado en la florícola.</p>
+        <a href="/mis-pedidos" class="btn-link">Ver</a>
+    </div>
+
+    <div class="card">
+        <h3>🧾 Mis facturas</h3>
+        <p>Consulta las facturas generadas por tus compras.</p>
+        <a href="/mis-facturas" class="btn-link">Ver</a>
+    </div>
+
+</div>
+
+{% endblock %}

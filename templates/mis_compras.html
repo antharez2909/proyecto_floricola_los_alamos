@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Mis Compras</h2>
+
+<table>
+    <tr>
+        <th>Código</th>
+        <th>Flor</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Subtotal</th>
+    </tr>
+
+    {% for compra in compras %}
+    <tr>
+        <td>{{ compra.codigo }}</td>
+        <td>{{ compra.flor }}</td>
+        <td>{{ compra.cantidad }}</td>
+        <td>$ {{ compra.precio }}</td>
+        <td>$ {{ compra.subtotal }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

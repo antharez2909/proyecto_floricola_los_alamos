@@ -1,0 +1,329 @@
+/* =========================================
+RESET
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+BODY
+========================================= */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #eef2f7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #243447;
+}
+
+/* =========================================
+HEADER
+========================================= */
+header {
+    background: linear-gradient(90deg, #243b55, #2f4b6a);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    margin-top: 5px;
+}
+
+/* =========================================
+NAV
+========================================= */
+nav {
+    background: white;
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 12px;
+    color: #4b2bd6;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #1fa463;
+}
+
+/* =========================================
+MAIN
+========================================= */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* =========================================
+TÍTULOS
+========================================= */
+h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #1f2d3d;
+    font-size: 2rem;
+}
+
+/* =========================================
+DASHBOARD
+========================================= */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+/* =========================================
+CARDS
+========================================= */
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 10px 24px rgba(31, 45, 61, 0.08);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #1f2d3d;
+}
+
+.card p {
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* =========================================
+BOTONES
+========================================= */
+.btn-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1fa463;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-link:hover {
+    background: #178a52;
+    color: white;
+}
+
+button {
+    background: #1fa463;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #178a52;
+}
+
+/* =========================================
+LOGIN / REGISTRO
+========================================= */
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+/* =========================================
+FORMULARIOS
+========================================= */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #1f2d3d;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccd6e0;
+    font-size: 1rem;
+    background: white;
+    color: #243447;
+}
+
+/* Hace que el select se vea igual de limpio */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #243447 50%),
+                      linear-gradient(135deg, #243447 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(50% - 3px),
+                         calc(100% - 14px) calc(50% - 3px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+}
+
+input:focus,
+select:focus {
+    border-color: #1fa463;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(31, 164, 99, 0.12);
+}
+
+/* =========================================
+MENSAJE DE ERROR
+========================================= */
+.error {
+    background: #e74c3c;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* =========================================
+TABLAS
+========================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+th {
+    background: #2f4b6a;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #f4f6f9;
+}
+
+/* =========================================
+CAJA DE SECCIÓN
+========================================= */
+.section-box {
+    background: white;
+    padding: 24px;
+    border-radius: 14px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 24px rgba(31, 45, 61, 0.08);
+}
+
+.section-box p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #425466;
+}
+
+/* =========================================
+TEXTOS DE APOYO
+========================================= */
+.registro-texto {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.registro-texto a {
+    color: #4b2bd6;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.registro-texto a:hover {
+    color: #1fa463;
+}
+
+/* =========================================
+FOOTER
+========================================= */
+footer {
+    background: #243b55;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    main {
+        padding: 35px 15px;
+    }
+
+    .form-container {
+        padding: 24px;
+    }
+}

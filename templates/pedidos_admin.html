@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Todos los pedidos</h2>
+
+<table>
+
+<tr>
+    <th>Cliente</th>
+    <th>Flor</th>
+</tr>
+
+{% for p in pedidos %}
+<tr>
+    <td>{{ p.cliente }}</td>
+    <td>{{ p.flor }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

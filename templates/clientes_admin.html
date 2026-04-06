@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Clientes</h2>
+
+<table>
+
+    <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Rol</th>
+    </tr>
+
+    <!-- Recorrer usuarios -->
+    {% for u in usuarios %}
+    <tr>
+        <td>{{ u.nombres }}</td>
+        <td>{{ u.correo }}</td>
+        <td>{{ u.rol }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}
